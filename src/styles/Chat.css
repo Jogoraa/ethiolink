@@ -1,0 +1,129 @@
+/* Chat Header */
+.chat-header {
+  background-color: #0078d4; /* Replace with your preferred color */
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chat-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.chat-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-indicator.online {
+  background-color: #28a745;
+}
+
+.status-text {
+  font-size: 0.9rem;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Messages Container */
+.messages-container {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Message Styles */
+.message {
+  background-color: #ffffff;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+}
+
+.message-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* User and Bot Messages */
+.user-message {
+  align-self: flex-end;
+  background-color: #0078d4;
+  color: white;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+}
+
+/* Chat Footer */
+.chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input {
+  width: 80%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.chat-input:focus {
+  border-color: #0078d4;
+}
+
+.send-btn {
+  background-color: #0078d4;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #005a8a;
+}
+
+.send-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
