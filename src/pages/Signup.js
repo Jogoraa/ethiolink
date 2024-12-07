@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom"; // Use useNavigate for navigation
+import "../styles/auth.css";
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -20,26 +22,19 @@ const Signup = () => {
   };
 
   return (
-    <div className="auth-container">
-      <h2>Create an Account</h2>
-      {error && <p className="error">{error}</p>}
-      <form onSubmit={handleSignup}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+    <div className="auth-form">
+      <h2>Sign Up for Ethiolink</h2>
+      <form>
+        {/* Your Signup Form here */}
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
         <button type="submit">Sign Up</button>
       </form>
+
+      <div className="switch-link">
+        <p>Already have an account? <Link to="/login">Login here</Link></p>
+      </div>
     </div>
   );
 };

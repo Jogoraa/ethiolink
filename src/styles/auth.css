@@ -1,0 +1,122 @@
+/* General Layout Styles */
+.auth-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 0;
+    background: linear-gradient(135deg, #0078d4, #00c6ff); /* Subtle gradient background */
+    color: #333;
+  }
+  
+  /* Header Section */
+  .auth-layout header {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .auth-layout header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0078d4;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  
+  /* Main Content Area (where the forms will be rendered) */
+  .auth-layout main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 400px; /* Limit form width */
+  }
+  
+  .auth-layout main .form-container {
+    width: 100%;
+  }
+  
+  /* Footer Section */
+  .auth-layout footer {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #f0f0f0;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Input fields */
+  .auth-layout input[type="text"],
+  .auth-layout input[type="password"],
+  .auth-layout input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .auth-layout input[type="text"]:focus,
+  .auth-layout input[type="password"]:focus,
+  .auth-layout input[type="email"]:focus {
+    border-color: #0078d4;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 120, 212, 0.3);
+  }
+  
+  /* Buttons */
+  .auth-layout button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #0078d4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-layout button:hover {
+    background-color: #005a8a;
+  }
+  
+  /* Link styles (for sign up / login toggle links) */
+  .auth-layout .link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #0078d4;
+    text-decoration: none;
+  }
+  
+  .auth-layout .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Small Screen Responsiveness */
+  @media (max-width: 480px) {
+    .auth-layout header h1 {
+      font-size: 2rem;
+    }
+  
+    .auth-layout main {
+      padding: 1.5rem;
+      margin: 1rem;
+      max-width: 90%;
+    }
+  }
+  

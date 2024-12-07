@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom"; // Use useNavigate instead of useHistory
+import "../styles/auth.css";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -40,6 +42,9 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <div className="switch-link">
+        <p>Don't have an account? <Link to="/signup">Register here</Link></p>
+      </div>
     </div>
   );
 };
